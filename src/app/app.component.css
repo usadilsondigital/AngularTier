@@ -1,0 +1,311 @@
+.container1 {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 46px;
+}
+
+body {
+    /*background-color: red;*/
+    height: 620px;
+}
+
+.row>* {
+    width: unset!important;
+    /*background-color: #fafafa;*/
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: #efefef;
+    }
+    .bottom-left {
+        display: none
+    }
+    .top-left {
+        display: none
+    }
+    .top-right {
+        font-size: 10px;
+    }
+    .bottom-right {
+        font-size: 10px;
+    }
+    #isucorp-text {
+        font-size: 160%;
+    }
+    .centered {
+        position: absolute;
+        top: 8px;
+        left: 30px;
+    }
+    #textocentered2 {
+        margin-top: 0px;
+    }
+    #world-text {
+        display: none
+    }
+    #software-text {
+        display: none
+    }
+    .container-form,
+    .container-fluid-form,
+    .container-lg-form,
+    .container-md-form,
+    .container-sm-form,
+    .container-xl-form {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 12px;
+        background-color: white;
+    }
+    #contactForm1 {
+        margin-top: -15px;
+    }
+    #forma {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #divInput1 {
+        width: 100%;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    #divInput2 {
+        width: 100%;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    #divInput3 {
+        width: 100%;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    #divInput4 {
+        width: 100%;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+    #divButtonSend {
+        display: flex;
+        justify-content: center;
+    }
+    #buttonSend {
+        width: 94%;
+        background-color: red;
+        color: #fff;
+        border-color: lightgray;
+        border-radius: 6px;
+        border: solid 1px;
+        height: 40px;
+    }
+    #createResBtn {
+        display: none;
+    }
+    #citeText {
+        display: none;
+    }
+    #dropDMenu {
+        font-size: 10px;
+        padding: 0;
+    }
+    #dropDMenuBtn {
+        font-size: 10px;
+        padding: 0;
+    }
+    #dropDMenuDiv {
+        font-size: 10px;
+        padding: 0;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {
+    body {
+        background-color: #efefef;
+    }
+    #isucorp-text {
+        font-size: 200%
+    }
+    #textocentered2 {
+        margin-top: 10px;
+    }
+    #world-text {
+        font-size: 50%
+    }
+    #software-text {
+        font-size: 50%
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+    #createResBtn {
+        font-size: 10px;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: #efefef;
+    }
+    #isucorp-text {
+        font-size: 260%
+    }
+    #textocentered2 {
+        margin-top: 15px;
+    }
+    #world-text {
+        font-size: 70%
+    }
+    #software-text {
+        font-size: 70%
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    body {
+        background-color: #efefef;
+    }
+    #isucorp-text {
+        font-size: 300%
+    }
+    #textocentered2 {
+        margin-top: 20px;
+    }
+    #world-text {
+        font-size: 80%
+    }
+    #software-text {
+        font-size: 90%
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+    .container-form,
+    .container-fluid-form,
+    .container-lg-form,
+    .container-md-form,
+    .container-sm-form,
+    .container-xl-form {
+        width: 100%;
+        padding-right: 5px;
+        padding-left: 5px;
+        padding-left: 5px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 12px;
+        background-color: white;
+    }
+    #contactForm1 {
+        margin-top: -15px;
+    }
+    #forma {
+        display: flex;
+        flex-direction: row;
+    }
+    #divInput1 {
+        width: 20%;
+    }
+    #divInput2 {
+        width: 20%;
+    }
+    #divInput3 {
+        width: 20%;
+    }
+    #divInput4 {
+        width: 20%;
+    }
+    #divButtonSend {
+        display: flex;
+        justify-content: flex-end;
+        width: 84%;
+    }
+    #buttonSend {
+        width: 14%;
+        background-color: red;
+        color: #fff;
+        border-color: lightgray;
+        border-radius: 6px;
+        border: solid 1px;
+        height: 40px;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background-color: #efefef;
+    }
+    #isucorp-text {
+        font-size: 360%
+    }
+    #textocentered2 {
+        margin-top: 25px;
+    }
+    #world-text {
+        font-size: 100%
+    }
+    #software-text {
+        font-size: 100%
+    }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+    }
+}

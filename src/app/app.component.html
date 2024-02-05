@@ -1,0 +1,75 @@
+<body>
+
+    <div class="container1">
+        <img src="../../assets/Picture1.jpg" class="img1" alt="cinque terre" style="width:100%">
+        <div class="bottom-left">
+            <!---Bottom Left--->
+        </div>
+        <div class="top-left">
+            <!---Top Left--->
+        </div>
+        <div class="top-right">
+            <!---Top Right--->
+            <label for="">
+                {{ 'HOME.SELECT' | translate}}
+                <select #langselect (change)="translate.use(langselect.value)">
+                <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{lang}}</option>                
+            </select>
+            </label>
+
+        </div>
+        <div class="bottom-right">
+            <!---Bottom Right--->
+            <div class="dropdown" style="color: white;" id="dropDMenuDiv">
+                <button id="dropDMenuBtn" type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown">
+                    {{ 'HOME.menu_right' | translate}}
+                </button>
+                <div class="dropdown-menu" id="dropDMenu">
+                    <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link text-dark" [routerLink]="['/reservation']">{{ 'HOME.reservation' | translate}}</a>
+                    </li>
+                    <li class="nav-item" [routerLinkActive]="['link-active']" [routerLinkActiveOptions]="{ exact: true }">
+                        <a class="nav-link text-dark" [routerLink]="['/reservationcreate']">{{ 'HOME.create_reservation' | translate}}</a>
+                    </li>
+                </div>
+            </div>
+
+        </div>
+        <div id="textocentered" class="centered">
+            <div class="row">
+                <h1 id="isucorp-text">
+                    <strong>ISU</strong>Corp
+                </h1>
+                <div id="textocentered2">
+                    <h6 id="world-text" class="text-left m-b-0">{{ 'HOME.world_class' | translate}} </h6>
+                    <h6 id="software-text" class="text-left m-b-0">{{ 'HOME.soft_dev' | translate}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center bg-light mb-2 mt-2" style="height: 45px;">
+        <div class="p-2  bg-light" style="color:red;margin-left:10px ;font-size: 26px;">{{ 'HOME.reservation_lists' | translate}}</div>
+
+        <div id="citeTextDiv" class="p-2 bg-light">
+            <cite id="citeText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, magna aliqua</cite>
+        </div>
+
+        <div id="createResDiv">
+
+            <a id="createResBtn" style="border-radius: 6px;" class="p-2 bg-secondary text-white" [routerLink]="['/reservationcreate']">{{ 'HOME.create_reservation' | translate}}</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="container ">
+        <router-outlet></router-outlet>
+    </div>
+
+</body>
