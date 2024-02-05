@@ -1,0 +1,31 @@
+{
+    "HOME": {
+        "HOME": "Home",
+        "TITLE": "Bonjour Angular",
+        "TEXT": "Ceci est une démo créée avec l'internationalisation",
+        "SELECT": "Choisir la langue",
+        "world_class": "Classe mondiale",
+        "soft_dev": "Développement de logiciels",
+        "menu_right": "Menu",
+        "reservation": "Réservation",
+        "create_reservation": "Créer une réservation",
+        "contactname": "Nom du contact",
+        "contacttype": "Type de contact",
+        "ranking_title": "Classement",
+        "sortby": "Trier par",
+        "sortbyDateASC": "Par date ascendante",
+        "sortbyDateDESC": "Par date décroissante",
+        "sortbyAlphASC": "Par ordre alphabétique croissant",
+        "sortbyAlphDESC": "Par ordre alphabétique décroissant",
+        "sortbyRanking": "Par classement",
+        "addFav": "Ajouter des favoris",
+        "btnEdit": "Éditer",
+        "btnDelete": "Effacer",
+        "contactSelect": "Type de contact",
+        "contactName": "Nom du contact",
+        "phoneNumber": "Numéro de téléphone",
+        "description": "La description",
+        "reservation_lists": "Liste de réservation"
+
+    }
+}
