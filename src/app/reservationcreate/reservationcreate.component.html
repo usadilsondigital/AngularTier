@@ -1,0 +1,51 @@
+<div class="container-fluid">
+    <div id="divFormulario" style="padding:5px;background-color: #fafafa">
+
+        <form [formGroup]="form" (ngSubmit)="addReservation()">
+            <div class="container bg-white">
+                <div id="forma" class="d-flex justify-content-center">
+                    <div id="divInput1" class="input-group mb-3" style="border: lightgray solid 1px;border-radius: 3px;">
+                        <span class="input-group-text" id="basic-addon1" style="border: none;background-color:transparent;"><i class='fas fa-user-friends' style="color: grey;margin-right: -10px;"></i></span>
+                        <input formControlName="contactname" type="text" class="form-control" placeholder=" {{ 'HOME.contactName' | translate}} " aria-label="contactname" aria-describedby="contactname" style="border: none;background-color:transparent;">
+                    </div>
+
+                    <div id="divInput2" class="input-group mb-3" style="border: lightgray solid 1px;border-radius: 3px;">
+                        <span class="input-group-text mb-3" id="basic-addon1" style="border: none;background-color:transparent;"><i class='fas fa-map-marker-alt' style="color: grey;margin-right: -10px;"></i></span>
+
+                        <select id="mySelect" formControlName="contacttype" style="background-color: #fafafa;" class="form-control" aria-label="Default select example">                                                  
+                            
+                            <option *ngFor="let tipos of listTypes" value="{{tipos.id}}">{{tipos.name}}</option>
+                        </select>
+                    </div>
+
+                    <div id="divInput3" class="input-group mb-3" style="border: lightgray solid 1px;border-radius: 3px;">
+                        <span class="input-group-text" id="basic-addon1" style="border: none;background-color:transparent;"><i class='fas fa-phone' style="color: grey;margin-right: -10px;"></i></span>
+                        <input formControlName="phonenumber" type="text" min="10000000" max="99999999" class="form-control" placeholder=" {{ 'HOME.phoneNumber' | translate}} " aria-label="Phone" aria-describedby="phone" style="border: none;background-color:transparent;">
+                    </div>
+
+                    <div id="divInput4" class="input-group mb-3" style="border: lightgray solid 1px;border-radius: 3px;">
+                        <span class="input-group-text" id="basic-addon1" style="border: none;background-color:transparent;"><i class='fas fa-calendar-alt' style="color: grey;margin-right: -10px;"></i></span>
+                        <input formControlName="birthdate" type="date" class="form-control" placeholder=" Birth Date " aria-label="birthdate" aria-describedby="birthdate" style="border: none;background-color:transparent;">
+
+                    </div>
+                </div>
+                <div>
+                    <div id="divInput5" class="input-group mb-3" style="border: lightgray solid 1px;border-radius: 3px;">
+                        <textarea formControlName="description" rows="4" cols="50" type="textarea" class="form-control" placeholder=" {{ 'HOME.description' | translate}} " aria-label="description" aria-describedby="description" style="border: none;background-color:transparent;">
+                        </textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div id="divButtonSend">
+                <button id="buttonSend" type="submit"> SEND </button>
+            </div>
+
+        </form>
+
+
+
+    </div>
+
+
+</div>

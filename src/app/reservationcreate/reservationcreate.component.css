@@ -1,0 +1,32 @@
+#buttonSend {
+    width: 94%;
+    background-color: red;
+    color: #fff;
+    border-color: lightgray;
+    border-radius: 6px;
+    border: solid 1px;
+    height: 40px;
+}
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {
+    #divButtonSend {
+        display: flex;
+        justify-content: flex-end;
+        width: 84%;
+    }
+    #buttonSend {
+        width: 14%;
+        background-color: red;
+        color: #fff;
+        border-color: lightgray;
+        border-radius: 6px;
+        border: solid 1px;
+        height: 40px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {}
