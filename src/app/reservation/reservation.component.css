@@ -1,0 +1,59 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+#div_sortbyDateASC:hover {
+    background-color: grey;
+    color: white;
+}
+
+#div_sortbyDateDESC:hover {
+    background-color: grey;
+    color: white;
+}
+
+#div_sortbyAlphASC:hover {
+    background-color: grey;
+    color: white;
+}
+
+#div_sortbyAlphDESC:hover {
+    background-color: grey;
+    color: white;
+}
+
+#div_sortbyRanking:hover {
+    background-color: grey;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    #createResBtn {
+        display: none;
+    }
+    #citeText {
+        display: none;
+    }
+    #dropDMenu {
+        font-size: 10px;
+    }
+    #dropDMenuBtn {
+        font-size: 10px;
+    }
+    #dropDMenuDiv {
+        font-size: 10px;
+    }
+}

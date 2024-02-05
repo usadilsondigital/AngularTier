@@ -1,0 +1,100 @@
+<div class="bg-white" style="padding-left: 20px;padding-top: 20px;padding-right: 20px;padding-bottom: 100px;">
+    <div class="dropdown">
+        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" style="width: 180px;border: solid 1px grey;background-color: white;margin-bottom: 10px;">
+            <i class="fa fa-home"></i>  {{ 'HOME.sortby' | translate}}
+    </button>
+
+        <div class="dropdown-menu">
+            <div class="d-flex flex-column">
+                <div id="div_sortbyDateASC"> <a type="button" (click)="onListDA()">{{ 'HOME.sortbyDateASC' | translate}}</a></div>
+                <div id="div_sortbyDateDESC"> <a type="button" (click)="onListDD()">{{ 'HOME.sortbyDateDESC' | translate}}</a></div>
+                <div id="div_sortbyAlphASC"> <a type="button" (click)="onListAA()">{{ 'HOME.sortbyAlphASC' | translate}}</a></div>
+                <div id="div_sortbyAlphDESC"> <a type="button" (click)="onListAD()">{{ 'HOME.sortbyAlphDESC' | translate}}</a></div>
+                <div id="div_sortbyRanking"> <a type="button" (click)="onListRank()">{{ 'HOME.sortbyRanking' | translate}}</a></div>
+            </div>
+        </div>
+    </div>
+    <table>
+        <tbody>
+            <tr *ngFor="let reserv of listReservations" style="background-color: #fafafa;">
+                <td>
+                    <div style="display: flex;
+                    flex-direction: column;">
+                        <div>{{reserv.description}}</div>
+                        <div>{{reserv.dateBooking}}</div>
+                    </div>
+                </td>
+
+                <td *ngIf="reserv.rating=='5'">
+                    {{ 'HOME.ranking_title' | translate}}
+                    <div>
+                        <a (click)="hacer1Estrella(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer2Estrellas(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer3Estrellas(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer4Estrellas(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer5Estrellas(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                    </div>
+                </td>
+
+                <td *ngIf="reserv.rating=='4'">{{ 'HOME.ranking_title' | translate}}
+                    <div>
+                        <a (click)="hacer1Estrella(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer2Estrellas(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer3Estrellas(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer4Estrellas(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer5Estrellas(reserv)" class="btn" style="padding:0"> <i class='far fa-star' style="color: lightgray;"></i> </a>
+                    </div>
+                </td>
+
+                <td *ngIf="reserv.rating=='3'">{{ 'HOME.ranking_title' | translate}}
+                    <div>
+                        <a (click)="hacer1Estrella(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer2Estrellas(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer3Estrellas(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer4Estrellas(reserv)" class="btn" style="padding:0"> <i class='far fa-star' style="color: lightgray;"></i> </a>
+                        <a (click)="hacer5Estrellas(reserv)" class="btn" style="padding:0"> <i class='far fa-star' style="color: lightgray;"></i> </a>
+                    </div>
+                </td>
+
+
+                <td *ngIf="reserv.rating=='2'">{{ 'HOME.ranking_title' | translate}}
+                    <div>
+                        <a (click)="hacer1Estrella(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer2Estrellas(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer3Estrellas(reserv)" class="btn" style="padding:0"> <i class='far fa-star' style="color: lightgray;"></i> </a>
+                        <a (click)="hacer4Estrellas(reserv)" class="btn" style="padding:0"> <i class='far fa-star' style="color: lightgray;"></i> </a>
+                        <a (click)="hacer5Estrellas(reserv)" class="btn" style="padding:0"> <i class='far fa-star' style="color: lightgray;"></i> </a>
+                    </div>
+                </td>
+
+
+                <td *ngIf="reserv.rating=='1'">{{ 'HOME.ranking_title' | translate}}
+                    <div>
+                        <a (click)="hacer1Estrella(reserv)" class="btn" style="padding:0"> <i class='fas fa-star' style="color:yellow;"></i> </a>
+                        <a (click)="hacer2Estrellas(reserv)" class="btn" style="padding:0"> <i class='far fa-star' style="color: lightgray;"></i> </a>
+                        <a (click)="hacer3Estrellas(reserv)" class="btn" style="padding:0"> <i class='far fa-star' style="color: lightgray;"></i> </a>
+                        <a (click)="hacer4Estrellas(reserv)" class="btn" style="padding:0"> <i class='far fa-star' style="color: lightgray;"></i> </a>
+                        <a (click)="hacer5Estrellas(reserv)" class="btn" style="padding:0"> <i class='far fa-star' style="color: lightgray;"></i> </a>
+                    </div>
+                </td>
+
+                <td *ngIf="reserv.favorite==true; else elseBlock">
+                    <span id="spanFavorite1" disabled style="color:grey"> {{ 'HOME.addFav' | translate}} </span>
+
+                    <a (click)="quitarFavorita(reserv)" class="btn" style="width: 100px;"> <i class="fas fa-heart"> </i> </a>
+                </td>
+                <ng-template #elseBlock>
+                    <td>
+                        <span id="spanFavorite2" style="color:black"> {{ 'HOME.addFav' | translate}} </span>
+                        <a (click)="hacerFavorita(reserv)" class="btn" style="width: 100px;"> <i class="far fa-heart"> </i> </a>
+                    </td>
+                </ng-template>
+
+
+                <td>
+                    <a (click)="editarTarjeta(reserv)" class="btn btn-secondary" style="width: 100px;"> {{ 'HOME.btnEdit' | translate}} </a>
+                    <a (click)="eliminarTarjeta(reserv)" class="btn btn-warning"> <i class="fas fa-trash"> </i> </a>
+                </td>
+            </tr>
+    </table>
+</div>
